@@ -1,0 +1,354 @@
+{
+  "messageHistory": [
+    {
+      "contactId": "1",
+      "name": "Sarah Johnson",
+      "phoneNumber": "+1-555-123-4567",
+      "messages": [
+        {
+          "date": "2024-11-03",
+          "messages": [
+            {
+              "time": "09:15:23",
+              "content": "Hey, are we still on for lunch today?",
+              "type": "received"
+            },
+            {
+              "time": "09:16:45",
+              "content": "Yes! Let's meet at the usual place at 12:30",
+              "type": "sent"
+            }
+          ]
+        },
+        {
+          "date": "2024-11-02",
+          "messages": [
+            {
+              "time": "18:45:12",
+              "content": "Don't forget about tomorrow's meeting!",
+              "type": "received"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "contactId": "2",
+      "name": "Michael Chen",
+      "phoneNumber": "+1-555-987-6543",
+      "messages": [
+        {
+          "date": "2024-11-03",
+          "messages": [
+            {
+              "time": "10:30:00",
+              "content": "Can you send me the project files?",
+              "type": "received"
+            },
+            {
+              "time": "10:35:15",
+              "content": "Just sent them via email",
+              "type": "sent"
+            }
+          ]
+        },
+        {
+          "date": "2024-11-01",
+          "messages": [
+            {
+              "time": "14:20:45",
+              "content": "Great work on the presentation!",
+              "type": "received"
+            },
+            {
+              "time": "14:25:30",
+              "content": "Thanks! The team really pulled together",
+              "type": "sent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "contactId": "3",
+      "name": "Emma Wilson",
+      "phoneNumber": "+1-555-789-0123",
+      "messages": [
+        {
+          "date": "2024-11-03",
+          "messages": [
+            {
+              "time": "11:05:33",
+              "content": "Happy birthday! 🎉🎂",
+              "type": "sent"
+            },
+            {
+              "time": "11:10:45",
+              "content": "Thank you so much! 😊",
+              "type": "received"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "contactId": "4",
+      "name": "Olivia Martinez",
+      "phoneNumber": "+1-555-654-3210",
+      "messages": [
+        {
+          "date": "2024-11-02",
+          "messages": [
+            {
+              "time": "12:00:00",
+              "content": "Hey, do you have the notes from last week?",
+              "type": "received"
+            },
+            {
+              "time": "12:02:15",
+              "content": "Yes, I’ll send them over now.",
+              "type": "sent"
+            }
+          ]
+        },
+        {
+          "date": "2024-10-31",
+          "messages": [
+            {
+              "time": "15:30:00",
+              "content": "Thanks for helping with the project!",
+              "type": "sent"
+            },
+            {
+              "time": "15:35:12",
+              "content": "No problem! It was fun working together.",
+              "type": "received"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "contactId": "5",
+      "name": "Sophia Lee",
+      "phoneNumber": "+1-555-321-0987",
+      "messages": [
+        {
+          "date": "2024-11-03",
+          "messages": [
+            {
+              "time": "08:45:12",
+              "content": "Morning! Are you joining the team call?",
+              "type": "received"
+            },
+            {
+              "time": "08:47:30",
+              "content": "Yes, logging in now.",
+              "type": "sent"
+            }
+          ]
+        },
+        {
+          "date": "2024-11-01",
+          "messages": [
+            {
+              "time": "17:00:00",
+              "content": "Just finished the report.",
+              "type": "sent"
+            },
+            {
+              "time": "17:05:15",
+              "content": "Great! Thanks for the quick turnaround.",
+              "type": "received"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "contactId": "6",
+      "name": "Liam Davis",
+      "phoneNumber": "+1-555-876-5432",
+      "messages": [
+        {
+          "date": "2024-11-03",
+          "messages": [
+            {
+              "time": "13:15:23",
+              "content": "Want to grab coffee later?",
+              "type": "received"
+            },
+            {
+              "time": "13:16:45",
+              "content": "Sounds good! Let’s meet around 3 PM.",
+              "type": "sent"
+            }
+          ]
+        },
+        {
+          "date": "2024-10-31",
+          "messages": [
+            {
+              "time": "09:30:00",
+              "content": "Are you still coming to the event?",
+              "type": "received"
+            },
+            {
+              "time": "09:35:15",
+              "content": "Yes, I'll be there!",
+              "type": "sent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "contactId": "7",
+      "name": "Noah Brown",
+      "phoneNumber": "+1-555-543-2109",
+      "messages": [
+        {
+          "date": "2024-11-02",
+          "messages": [
+            {
+              "time": "16:45:00",
+              "content": "Did you check out the new series?",
+              "type": "received"
+            },
+            {
+              "time": "16:47:12",
+              "content": "Yes! It was amazing.",
+              "type": "sent"
+            }
+          ]
+        },
+        {
+          "date": "2024-10-30",
+          "messages": [
+            {
+              "time": "11:20:45",
+              "content": "Need any help with the project?",
+              "type": "received"
+            },
+            {
+              "time": "11:25:30",
+              "content": "All set, but thanks for asking!",
+              "type": "sent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "contactId": "8",
+      "name": "Ava Thomas",
+      "phoneNumber": "+1-555-654-0987",
+      "messages": [
+        {
+          "date": "2024-11-01",
+          "messages": [
+            {
+              "time": "10:00:00",
+              "content": "Happy Halloween! 🎃",
+              "type": "received"
+            },
+            {
+              "time": "10:05:45",
+              "content": "Thanks! Hope you have a spooky day!",
+              "type": "sent"
+            }
+          ]
+        },
+        {
+          "date": "2024-10-28",
+          "messages": [
+            {
+              "time": "08:15:00",
+              "content": "Meeting today at 10?",
+              "type": "received"
+            },
+            {
+              "time": "08:20:10",
+              "content": "Yes, I’ll see you there.",
+              "type": "sent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "contactId": "9",
+      "name": "Isabella Walker",
+      "phoneNumber": "+1-555-321-7654",
+      "messages": [
+        {
+          "date": "2024-11-02",
+          "messages": [
+            {
+              "time": "13:00:00",
+              "content": "Are we still on for the gym later?",
+              "type": "received"
+            },
+            {
+              "time": "13:01:45",
+              "content": "Yes, see you at 5!",
+              "type": "sent"
+            }
+          ]
+        },
+        {
+          "date": "2024-10-29",
+          "messages": [
+            {
+              "time": "18:30:45",
+              "content": "Do you want to go for a walk?",
+              "type": "received"
+            },
+            {
+              "time": "18:35:30",
+              "content": "Sure! Where should we meet?",
+              "type": "sent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "contactId": "10",
+      "name": "James Clark",
+      "phoneNumber": "+1-555-876-1234",
+      "messages": [
+        {
+          "date": "2024-11-02",
+          "messages": [
+            {
+              "time": "15:45:00",
+              "content": "How’s the new project going?",
+              "type": "received"
+            },
+            {
+              "time": "15:47:30",
+              "content": "It's challenging but good!",
+              "type": "sent"
+            }
+          ]
+        },
+        {
+          "date": "2024-10-29",
+          "messages": [
+            {
+              "time": "14:00:00",
+              "content": "Need any help?",
+              "type": "received"
+            },
+            {
+              "time": "14:05:15",
+              "content": "I think I’m good, thanks!",
+              "type": "sent"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
