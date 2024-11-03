@@ -18,7 +18,30 @@ import Chat from "./Chat";
 import messageHistory from "@/data.json";
 import { useRouter, useParams } from "next/navigation";
 
-const getLastMessage = (messages: any[]) => {
+interface Message {
+  time: string;
+  content: string;
+  type: string;
+}
+
+interface DateGroup {
+  date: string;
+  messages: Message[];
+}
+
+interface ChatHistory {
+  contactId: string;
+  name: string;
+  phoneNumber: string;
+  messages: DateGroup[];
+}
+
+const getLastMessage = (
+  messages: DateGroup[]
+): { content: string; time: string } => {
+  if (!messages.length || !messages[0].messages.length) {
+    return { content: "", time: "" };
+  }
   const latestDateMessages = messages[0];
   const lastMessage =
     latestDateMessages.messages[latestDateMessages.messages.length - 1];
@@ -28,14 +51,17 @@ const getLastMessage = (messages: any[]) => {
   };
 };
 
-const getLastMessageDate = (messages: any[]) => {
+const getLastMessageDate = (messages: DateGroup[]): Date => {
+  if (!messages.length || !messages[0].messages.length) {
+    return new Date(0); // Return earliest possible date if no messages
+  }
   const latestDateMessages = messages[0];
   const lastMessage =
     latestDateMessages.messages[latestDateMessages.messages.length - 1];
   return new Date(`${latestDateMessages.date}T${lastMessage.time}`);
 };
 
-const truncateMessage = (message: string, maxLength: number = 30) => {
+const truncateMessage = (message: string, maxLength: number = 30): string => {
   if (message.length <= maxLength) return message;
   return message.substring(0, maxLength) + "...";
 };
@@ -45,8 +71,13 @@ export function AppSidebar() {
   const params = useParams();
   const currentContactId = params?.contactId as string;
 
+  // Sort message history by last message date
   const sortedMessageHistory = [...messageHistory.messageHistory].sort(
-    (a, b) => getLastMessageDate(b.messages) - getLastMessageDate(a.messages)
+    (a, b) => {
+      const dateA = getLastMessageDate(a.messages).getTime();
+      const dateB = getLastMessageDate(b.messages).getTime();
+      return dateB - dateA;
+    }
   );
 
   return (
@@ -55,7 +86,7 @@ export function AppSidebar() {
         <Navbar />
         <InSearch width="w-full" placeholder="Search a chat" />
       </SidebarHeader>
-      <SidebarContent >
+      <SidebarContent>
         <SidebarGroup>
           <SidebarGroupLabel>Chats</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -68,7 +99,9 @@ export function AppSidebar() {
                   <SidebarMenuItem
                     key={chat.contactId}
                     onClick={() => router.push(`/chat/${chat.contactId}`)}
-                    className={isActive ? "bg-background border-2 rounded-lg" : ""}
+                    className={
+                      isActive ? "bg-background border-2 rounded-lg" : ""
+                    }
                   >
                     <SidebarMenuButton asChild>
                       <Chat
