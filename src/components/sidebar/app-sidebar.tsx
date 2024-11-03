@@ -29,12 +29,6 @@ interface DateGroup {
   messages: Message[];
 }
 
-interface ChatHistory {
-  contactId: string;
-  name: string;
-  phoneNumber: string;
-  messages: DateGroup[];
-}
 
 const getLastMessage = (
   messages: DateGroup[]
