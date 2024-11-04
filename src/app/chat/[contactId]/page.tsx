@@ -44,7 +44,7 @@ const Home = () => {
                     </span>
                   </div>
                 </div>
-                <div className="space-y-1">
+                <div className="space-y-4">
                   {dateGroup.messages
                     .sort(
                       (a, b) =>
