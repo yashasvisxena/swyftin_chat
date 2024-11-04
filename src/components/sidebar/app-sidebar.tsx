@@ -11,6 +11,7 @@ import {
   SidebarMenu,
   SidebarMenuItem,
   SidebarMenuButton,
+  useSidebar,
 } from "@/components/ui/sidebar";
 import Navbar from "../Header/Navbar";
 import InSearch from "../common/Insearch";
@@ -28,7 +29,6 @@ interface DateGroup {
   date: string;
   messages: Message[];
 }
-
 
 const getLastMessage = (
   messages: DateGroup[]
@@ -73,7 +73,7 @@ export function AppSidebar() {
       return dateB - dateA;
     }
   );
-
+  const { isMobile, toggleSidebar } = useSidebar();
   return (
     <Sidebar>
       <SidebarHeader>
@@ -92,7 +92,10 @@ export function AppSidebar() {
                 return (
                   <SidebarMenuItem
                     key={chat.contactId}
-                    onClick={() => router.push(`/chat/${chat.contactId}`)}
+                    onClick={() => {
+                      router.push(`/chat/${chat.contactId}`);
+                      if (isMobile) toggleSidebar();
+                    }}
                     className={
                       isActive ? "bg-background border-2 rounded-lg" : ""
                     }
