@@ -15,57 +15,64 @@ const Home = () => {
   );
 
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView();
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [contactId]);
 
   if (!contactData) {
     return <div>Contact not found</div>;
   }
 
-  // Sort date groups in ascending order
   const sortedDateGroups = [...contactData.messages].sort(
     (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
   );
 
   return (
-    <div className="size-full flex flex-col">
-      <Header name={contactData.name} number={contactData.phoneNumber} />
-      <div className="flex-1 overflow-y-auto p-4">
-        <div className="space-y-4 min-h-full flex flex-col justify-end">
-          {sortedDateGroups.map((dateGroup) => (
-            <div key={dateGroup.date}>
-              <div className="flex items-center justify-center my-6">
-                <div className="bg-muted px-3 py-1 rounded-full">
-                  <span className="text-xs font-medium text-muted-foreground">
-                    {dateGroup.date}
-                  </span>
+    <div className="h-screen flex flex-col">
+      <div className="flex-none">
+        <Header name={contactData.name} number={contactData.phoneNumber} />
+      </div>
+
+      <div className="flex-1 overflow-y-auto">
+        <div className="p-4">
+          <div className="space-y-4 min-h-full flex flex-col justify-end">
+            {sortedDateGroups.map((dateGroup) => (
+              <div key={dateGroup.date}>
+                <div className="flex items-center justify-center my-6">
+                  <div className="bg-muted px-3 py-1 rounded-full">
+                    <span className="text-xs font-medium text-muted-foreground">
+                      {dateGroup.date}
+                    </span>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  {dateGroup.messages
+                    .sort(
+                      (a, b) =>
+                        new Date(`${dateGroup.date} ${a.time}`).getTime() -
+                        new Date(`${dateGroup.date} ${b.time}`).getTime()
+                    )
+                    .map((msg, idx) => (
+                      <Message
+                        key={`${dateGroup.date}-${idx}`}
+                        message={msg.content}
+                        timestamp={`${dateGroup.date} ${msg.time}`}
+                        sender={
+                          msg.type === "received" ? contactData.name : "You"
+                        }
+                        isOwn={msg.type === "sent"}
+                      />
+                    ))}
                 </div>
               </div>
-              <div className="space-y-4">
-                {dateGroup.messages
-                  .sort(
-                    (a, b) =>
-                      new Date(`${dateGroup.date} ${a.time}`).getTime() -
-                      new Date(`${dateGroup.date} ${b.time}`).getTime()
-                  )
-                  .map((msg, idx) => (
-                    <Message
-                      key={`${dateGroup.date}-${idx}`}
-                      message={msg.content}
-                      timestamp={`${dateGroup.date} ${msg.time}`}
-                      sender={
-                        msg.type === "received" ? contactData.name : "You"
-                      }
-                      isOwn={msg.type === "sent"}
-                    />
-                  ))}
-              </div>
-            </div>
-          ))}
-          <div ref={messagesEndRef} />
+            ))}
+            <div ref={messagesEndRef} />
+          </div>
         </div>
       </div>
-      <ActionSection />
+
+      <div className="flex-none">
+        <ActionSection />
+      </div>
     </div>
   );
 };

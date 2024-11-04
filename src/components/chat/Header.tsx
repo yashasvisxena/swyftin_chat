@@ -16,8 +16,8 @@ const Header = ({ name, number }: headerProps) => {
       </Button>}
       <CircleUser size={40} className="text-muted-foreground" />
       <div className="flex items-center gap-2">
-        <span>{name}</span>
-        <span className="text-sm">{number}</span>
+        <span className="text-base">{name}</span>
+        <span className="md:text-sm text-xs">{number}</span>
       </div>
     </div>
   );
