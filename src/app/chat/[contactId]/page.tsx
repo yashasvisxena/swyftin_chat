@@ -32,9 +32,9 @@ const Home = () => {
         <Header name={contactData.name} number={contactData.phoneNumber} />
       </div>
 
-      <div className="flex-1 overflow-y-auto">
+      <div className="flex-1 overflow-y-auto flex-col justify-end">
         <div className="p-1">
-          <div className="space-y-4 flex flex-col justify-end">
+          <div className="space-y-4 h-full flex flex-col justify-end">
             {sortedDateGroups.map((dateGroup) => (
               <div key={dateGroup.date}>
                 <div className="flex items-center justify-center my-6">
@@ -44,7 +44,7 @@ const Home = () => {
                     </span>
                   </div>
                 </div>
-                <div className="space-y-4">
+                <div className="space-y-1">
                   {dateGroup.messages
                     .sort(
                       (a, b) =>

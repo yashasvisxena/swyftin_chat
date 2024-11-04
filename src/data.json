@@ -180,7 +180,17 @@
             },
             {
               "time": "13:16:45",
-              "content": "Sounds good! Let’s meet around 3 PM.",
+              "content": "Sounds good! Let's meet around 3 PM.",
+              "type": "sent"
+            },
+            {
+              "time": "14:45:12",
+              "content": "Running about 10 mins late, sorry!",
+              "type": "received"
+            },
+            {
+              "time": "14:46:00",
+              "content": "No worries, see you then!",
               "type": "sent"
             }
           ]
@@ -196,6 +206,66 @@
             {
               "time": "09:35:15",
               "content": "Yes, I'll be there!",
+              "type": "sent"
+            },
+            {
+              "time": "18:20:33",
+              "content": "Great presentation today!",
+              "type": "received"
+            },
+            {
+              "time": "18:45:22",
+              "content": "Thanks! Glad you enjoyed it",
+              "type": "sent"
+            }
+          ]
+        },
+        {
+          "date": "2024-10-28",
+          "messages": [
+            {
+              "time": "11:20:15",
+              "content": "Did you get the project files I sent?",
+              "type": "received"
+            },
+            {
+              "time": "11:25:30",
+              "content": "Yes, reviewing them now",
+              "type": "sent"
+            },
+            {
+              "time": "15:40:12",
+              "content": "Everything looks good, just made a few minor suggestions",
+              "type": "sent"
+            },
+            {
+              "time": "16:05:45",
+              "content": "Perfect, thanks for the quick feedback!",
+              "type": "received"
+            }
+          ]
+        },
+        {
+          "date": "2024-10-25",
+          "messages": [
+            {
+              "time": "10:00:00",
+              "content": "Team meeting at 2 PM today?",
+              "type": "received"
+            },
+            {
+              "time": "10:02:33",
+              "content": "Yes, in the main conference room",
+              "type": "sent"
+            },
+            {
+              "time": "13:55:18",
+              "content": "Can you bring the Q3 reports?",
+              "type": "received"
+            },
+            {
+              "time": "13:56:45",
+              "content": "Already got them printed out",
               "type": "sent"
             }
           ]
