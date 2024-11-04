@@ -33,8 +33,8 @@ const Home = () => {
       </div>
 
       <div className="flex-1 overflow-y-auto">
-        <div className="p-4">
-          <div className="space-y-4 min-h-full flex flex-col justify-end">
+        <div className="p-1">
+          <div className="space-y-4 flex flex-col justify-end">
             {sortedDateGroups.map((dateGroup) => (
               <div key={dateGroup.date}>
                 <div className="flex items-center justify-center my-6">
@@ -65,8 +65,8 @@ const Home = () => {
                 </div>
               </div>
             ))}
-            <div ref={messagesEndRef} />
           </div>
+          <div ref={messagesEndRef} />
         </div>
       </div>
 
